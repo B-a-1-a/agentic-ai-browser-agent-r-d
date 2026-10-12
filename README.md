@@ -22,3 +22,5 @@ Experiments/
 - **[Experiments](Experiments/):** Prototypes, trials, and evaluations.
 
 Every research study and experiment must have its own separate directory. Read [AGENTS.md](AGENTS.md) for the repository organization rules.
+
+Before starting product research, read the [product research skills guide](Research/Product/SKILLS.md). Tell the user which skill you will use and why.
