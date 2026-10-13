@@ -10,3 +10,8 @@ These rules apply to all work in this repository.
 - Keep each study or experiment's notes, sources, code, data, and results inside its own directory. Do not place these files directly in a section directory or at the repository root.
 - Include a `README.md` in each study or experiment directory that explains its purpose, approach, status, and findings or results. For experiments, also include instructions for running them when applicable.
 - Related research and experiments still need separate directories; link between their READMEs when useful.
+
+# Product research skills
+
+- Before starting product research, read [Research/Product/SKILLS.md](Research/Product/SKILLS.md).
+- Tell the user which suggested skill you will use and why before starting the research.
