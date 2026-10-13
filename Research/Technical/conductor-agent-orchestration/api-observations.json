@@ -1,0 +1,108 @@
+{
+  "studyDate": "2026-10-12",
+  "retrievedAt": "2026-10-12T23:31:11.074Z",
+  "sourceUrl": "https://api.conductor.build/v0/openapi.json",
+  "openapiVersion": "3.0.3",
+  "apiInfo": {
+    "title": "Roundhouse public API",
+    "version": "0.0.1"
+  },
+  "scope": "Unauthenticated public contract inspection. No workspace or session operations executed.",
+  "workspaceStatus": {
+    "values": [
+      "initializing",
+      "ready",
+      "sleeping",
+      "archived",
+      "deleted",
+      "updating",
+      "unstarted"
+    ],
+    "fields": [
+      "workspaceId",
+      "status",
+      "lifecycleStep",
+      "updatedAt",
+      "errorMessage"
+    ],
+    "required": [
+      "workspaceId",
+      "status",
+      "updatedAt"
+    ]
+  },
+  "sessionStatus": {
+    "values": [
+      "idle",
+      "working",
+      "error"
+    ],
+    "fields": [
+      "workspaceId",
+      "sessionId",
+      "status",
+      "updatedAt",
+      "errorMessage",
+      "lastError",
+      "lastErrorAt"
+    ],
+    "required": [
+      "workspaceId",
+      "sessionId",
+      "status",
+      "updatedAt"
+    ]
+  },
+  "messageDelivery": {
+    "values": [
+      "queued",
+      "sent"
+    ],
+    "fields": [
+      "messageId",
+      "state",
+      "deepLink"
+    ]
+  },
+  "workspaceCreation": {
+    "responseFields": [
+      "workspaceId",
+      "sessionId",
+      "deepLink",
+      "initialMessage"
+    ],
+    "required": [
+      "workspaceId",
+      "sessionId",
+      "deepLink"
+    ],
+    "nonIdempotent": true
+  },
+  "sessionCreation": {
+    "requestFields": [
+      "workspaceId",
+      "sessionId",
+      "name",
+      "agent",
+      "model",
+      "effort",
+      "fastMode",
+      "messageId",
+      "message"
+    ]
+  },
+  "transcriptPolling": {
+    "queryParameters": [
+      "limit",
+      "offset",
+      "after"
+    ]
+  },
+  "cancellation": {
+    "endpoint": "POST /v0/sessions/{sessionId}/cancel",
+    "asynchronous": true,
+    "dropsQueuedMessages": true,
+    "preservesWorkspaceAndHistory": true
+  },
+  "note": "State values do not specify a complete transition graph. Human API documentation uses errored in one sentence, but the contract value is error."
+}
